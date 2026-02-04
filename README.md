@@ -1,73 +1,140 @@
-# Welcome to your Lovable project
+# Electricity Bill Calculator
 
-## Project info
+A simple and fair way to split electricity bills for shared rental homes in Nepal. Perfect for roommates who want to calculate their individual share of the electricity bill based on actual usage!
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🎯 What is this project?
 
-## How can I edit this code?
+This web application helps you:
+- Calculate individual electricity bill shares fairly
+- Keep track of bill history
+- Generate and download PDF receipts
+- No complicated calculations - just enter the numbers and we handle the rest!
 
-There are several ways of editing your application.
+## 🚀 Quick Start
 
-**Use Lovable**
+### Prerequisites
+You need to have Node.js installed on your computer. [Get Node.js here](https://nodejs.org/)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Installation
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+1. Clone this repository:
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/thewh2/Electricity-Bill-Calculator.git
+cd Electricity-Bill-Calculator
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. Install dependencies:
+```sh
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```sh
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+4. Open your browser and visit `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📖 How to Use
 
-**Use GitHub Codespaces**
+1. **Enter Bill Details**: Input the total bill amount, meter reading, and number of people sharing
+2. **Add Individual Usage**: Enter usage details for each person
+3. **Get Results**: The calculator shows how much each person needs to pay
+4. **Save or Download**: Save your bill history or download as PDF
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🛠️ Technologies Used
 
-## What technologies are used for this project?
+- **Vite** - Super fast build tool
+- **React** - UI library
+- **TypeScript** - For type-safe code
+- **Tailwind CSS** - For styling
+- **shadcn/ui** - Beautiful UI components
+- **Vitest** - For testing
 
-This project is built with:
+## 📁 Project Structure
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```
+src/
+├── components/       # React components
+│   ├── BillForm.tsx       # Input form
+│   ├── BillResults.tsx    # Results display
+│   ├── BillHistory.tsx    # Saved bills
+│   └── ui/               # UI components from shadcn
+├── pages/           # Page components
+├── utils/           # Helper functions
+│   ├── calculateBill.ts
+│   └── generatePDF.ts
+├── types/           # TypeScript types
+└── hooks/           # Custom React hooks
+```
 
-## How can I deploy this project?
+## 🧪 Testing
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Run tests with:
+```sh
+npm run test
+```
 
-## Can I connect a custom domain to my Lovable project?
+## 🔨 Building for Production
 
-Yes, you can!
+Create a production build:
+```sh
+npm run build
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Preview the build:
+```sh
+npm run preview
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📱 Features
+
+- ✅ Fair bill splitting algorithm
+- ✅ Bill history tracking
+- ✅ PDF download support
+- ✅ Mobile-friendly design
+- ✅ Responsive UI for all devices
+
+## 🐛 Found a Bug?
+
+If you found something that doesn't work as expected, please create an issue:
+
+1. Go to the [Issues](https://github.com/thewh2/Electricity-Bill-Calculator/issues) tab
+2. Click "New Issue"
+3. Describe what happened and what you expected
+4. Include screenshots if possible
+
+## ✨ Want a New Feature?
+
+Have an idea to make this better? We'd love to hear it!
+
+1. Go to [Issues](https://github.com/thewh2/Electricity-Bill-Calculator/issues)
+2. Click "New Issue"
+3. Tell us your idea - what feature would help you and why
+4. Discuss with us and we'll work on it together
+
+## 🤝 How to Contribute
+
+Want to help improve this project? Great!
+
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Make your changes
+4. Test your changes (`npm run test`)
+5. Commit your changes (`git commit -m 'Add some feature'`)
+6. Push to your branch (`git push origin feature/your-feature`)
+7. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the MIT License - feel free to use it however you like!
+
+## 💬 Questions or Need Help?
+
+- Check existing [issues](https://github.com/thewh2/Electricity-Bill-Calculator/issues)
+- Create a new issue with your question
+- We'll get back to you as soon as we can!
+
+---
+
+Made with ❤️ for fair bill sharing by **TheWH2**
