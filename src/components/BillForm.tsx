@@ -75,14 +75,14 @@ export function BillForm({
           <Zap className="w-4 h-4 text-primary" />
           Total Electricity Bill Amount (NPR)
         </label>
-        <input type="number" inputMode="decimal" placeholder="Enter total bill amount" value={totalBill} onChange={e => setTotalBill(e.target.value)} className="input-field" min="0" step="0.01" required />
+        <input type="number" inputMode="decimal" placeholder="Enter energy charges" value={totalBill} onChange={e => setTotalBill(e.target.value)} className="input-field" min="0" step="0.01" required />
       </div>
 
       {/* External Charges */}
       <div className="card-elevated p-4">
-        <label className="label-text">External / Extra Charges (₹)</label>
-        <input type="number" inputMode="decimal" placeholder="Enter external charges (0 if none)" value={externalCharges} onChange={e => setExternalCharges(e.target.value)} className="input-field" min="0" step="0.01" />
-        <p className="text-xs text-muted-foreground mt-1.5">Minimum / Extra Charges (NPR)</p>
+        <label className="label-text">Minimum / Extra Charges (NPR)</label>
+        <input type="number" inputMode="decimal" placeholder="Enter minimum charges (0 if none)" value={externalCharges} onChange={e => setExternalCharges(e.target.value)} className="input-field" min="0" step="0.01" />
+        <p className="text-xs text-muted-foreground mt-1.5">This is distributed equally to all.</p>
       </div>
 
       {/* Number of Users */}

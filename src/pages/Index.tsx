@@ -120,7 +120,7 @@ const Index = () => {
       
       <footer className="py-4 text-center border-t border-border">
         <p className="text-xs text-muted-foreground">
-          Powered by <span className="font-medium">TheWH2</span>
+          Powered by <a href="http://wh2hub.netlify.app/" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline">WH2HUB</a>
         </p>
       </footer>
     </div>
