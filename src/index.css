@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 150 20% 98%;
+    --foreground: 160 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 25% 10%;
+
+    --primary: 162 63% 41%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 160 20% 94%;
+    --secondary-foreground: 160 25% 20%;
+
+    --muted: 160 15% 92%;
+    --muted-foreground: 160 10% 45%;
+
+    --accent: 162 55% 92%;
+    --accent-foreground: 162 63% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 20% 88%;
+    --input: 160 20% 88%;
+    --ring: 162 63% 41%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --success: 145 65% 42%;
+    --success-foreground: 0 0% 100%;
+    --gradient-primary: linear-gradient(135deg, hsl(162 63% 41%), hsl(170 65% 35%));
+    --shadow-card: 0 2px 12px -2px hsl(160 25% 10% / 0.08);
+    --shadow-elevated: 0 8px 24px -4px hsl(160 25% 10% / 0.12);
+  }
+
+  .dark {
+    --background: 160 25% 8%;
+    --foreground: 150 20% 96%;
+
+    --card: 160 20% 12%;
+    --card-foreground: 150 20% 96%;
+
+    --popover: 160 20% 12%;
+    --popover-foreground: 150 20% 96%;
+
+    --primary: 162 60% 50%;
+    --primary-foreground: 160 25% 8%;
+
+    --secondary: 160 15% 18%;
+    --secondary-foreground: 150 20% 90%;
+
+    --muted: 160 15% 20%;
+    --muted-foreground: 160 10% 60%;
+
+    --accent: 162 40% 20%;
+    --accent-foreground: 162 60% 70%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 22%;
+    --input: 160 15% 22%;
+    --ring: 162 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .card-elevated {
+    @apply bg-card rounded-xl border border-border;
+    box-shadow: var(--shadow-card);
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-lg border border-input bg-background text-foreground 
+           placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 
+           focus:border-primary transition-all duration-200;
+  }
+
+  .label-text {
+    @apply block text-sm font-medium text-foreground mb-1.5;
+  }
+
+  .btn-primary {
+    @apply w-full py-3.5 px-6 rounded-xl font-semibold text-primary-foreground
+           transition-all duration-200 active:scale-[0.98];
+    background: var(--gradient-primary);
+  }
+
+  .btn-primary:hover {
+    @apply opacity-90;
+  }
+
+  .btn-secondary {
+    @apply w-full py-3 px-6 rounded-xl font-medium bg-secondary text-secondary-foreground
+           border border-border transition-all duration-200 active:scale-[0.98];
+  }
+
+  .btn-secondary:hover {
+    @apply bg-muted;
+  }
+
+  .result-card {
+    @apply bg-card rounded-xl border border-border p-4 space-y-3;
+    box-shadow: var(--shadow-card);
+  }
+
+  .stat-value {
+    @apply text-2xl font-bold text-foreground;
+  }
+
+  .stat-label {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .badge-success {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    background-color: hsl(var(--success) / 0.15);
+    color: hsl(var(--success));
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
