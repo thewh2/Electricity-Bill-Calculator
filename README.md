@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and visit `http://localhost:5173`
+4. Open your browser and visit `http://localhost:8080` or if any other port (e.g. 8081) if 8080 is already in use.
 
 ## 📖 How to Use
 
