@@ -137,4 +137,4 @@ This project is open source and available under the MIT License - feel free to u
 
 ---
 
-Made with ❤️ for fair bill sharing by **TheWH2**
+Made with ❤️ for fair bill sharing by [**TheWH2**](https://thewh2.netlify.app/)
